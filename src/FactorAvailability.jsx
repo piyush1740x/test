@@ -8,7 +8,7 @@ const FactorAvailability = () => {
     {
       name: "BRD Medical College",
       location: "गोरखपुर",
-      factors: { factor8: true, factor9: true, factor7: false },
+      factors: { factor8: true, factor9: true, factor7: true },
     },
   ];
 
@@ -58,8 +58,8 @@ const FactorAvailability = () => {
         </div>
       ) : (
         <div className="text-center">
-          <h1 className="text-2xl font-semibold text-gray-800 mb-6">
-            कृपया पहले लॉगिन करें
+          <h1 className="text-2xl font-semibold text-red-700 mb-6">
+          फैक्टर उपलब्धि देखने के लिए <br />लॉगिन करें
           </h1>
           <button
             className="bg-red-600 text-white font-bold py-2 px-6 rounded-md hover:bg-red-700 transition duration-300"

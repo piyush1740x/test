@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { loginWithRedirect, logout, user, isAuthenticated, isLoading } = useAuth0();
+  const { loginWithRedirect, logout, user, isAuthenticated, isLoading }=useAuth0();
 
   React.useEffect(() => {
     if (isOpen) {
@@ -122,9 +122,11 @@ const Navbar = () => {
             <li className="mx-4 my-6 md:my-0">
               <button
                 className="bg-red-500 text-white font-bold py-2 px-4 rounded-md hover:bg-white hover:text-red-600 transition duration-300 md:ml-4"
-                onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
               >
-                Logout
+                Log Out
               </button>
             </li>
           ) : (
